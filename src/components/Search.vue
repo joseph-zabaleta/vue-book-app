@@ -1,50 +1,55 @@
 <template>
-	<div class="form-wrapper">
-		<v-form ref="form" v-model="valid" lazy-validation>
-			<br />
-			<v-text-field
-				v-model="input"
-				:rules="inputRules"
-				label="Enter a Title or Author"
-				solo
-				required
-				hide-details="auto"
-				clearable
-			></v-text-field>
+	<div>
+		<Banner :message="'Search by Title or Author'"></Banner>
+		<div class="form-wrapper">
+			<v-form ref="form" v-model="valid" lazy-validation>
+				<br />
+				<v-text-field
+					v-model="input"
+					:rules="inputRules"
+					label="Enter a Title or Author"
+					solo
+					required
+					hide-details="auto"
+					clearable
+				></v-text-field>
 
-			<br />
-
-			<v-radio-group class="ma-0 pa-0" hide-details="auto" mandatory>
-				<v-radio
-					class="input-style"
-					label="Title"
-					value="title"
-					@change="updateRadio('title')"
-				></v-radio>
 				<br />
 
-				<v-radio
-					class="input-style"
-					label="Author"
-					value="author"
-					@change="updateRadio('author')"
-				></v-radio>
-			</v-radio-group>
-			<br />
-			<v-btn
-				block
-				:disabled="!valid"
-				color="black"
-				class="mr-4 white--text"
-				@click="validate"
-			>
-				Search The Google API
-			</v-btn>
-		</v-form>
+				<v-radio-group class="ma-0 pa-0" hide-details="auto" mandatory>
+					<v-radio
+						class="input-style"
+						label="Title"
+						value="title"
+						@change="updateRadio('title')"
+					></v-radio>
+					<br />
+
+					<v-radio
+						class="input-style"
+						label="Author"
+						value="author"
+						@change="updateRadio('author')"
+					></v-radio>
+				</v-radio-group>
+				<br />
+				<v-btn
+					block
+					:disabled="!valid"
+					color="black"
+					class="mr-4 white--text"
+					@click="validate"
+				>
+					Search The Google API
+				</v-btn>
+			</v-form>
+		</div>
 	</div>
 </template>
 
 <script>
+import Banner from './Banner.vue';
+
 export default {
 	name: 'Search',
 	data() {
@@ -69,6 +74,9 @@ export default {
 		updateRadio(value) {
 			this.selectedRadio = value;
 		},
+	},
+	components: {
+		Banner,
 	},
 };
 </script>

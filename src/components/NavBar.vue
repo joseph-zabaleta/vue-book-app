@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-app-bar dense dark color="black">
+		<v-app-bar dark color="black">
 			<v-toolbar-title>The Famous Book App</v-toolbar-title>
 
 			<v-spacer></v-spacer>
