@@ -16,9 +16,9 @@
 					<v-list-item
 						v-for="(option, idx) in this.navOptions"
 						:key="idx"
-						@click="() => {}"
+						@click="handleClick(option.path)"
 					>
-						<v-list-item-title>{{ option }}</v-list-item-title>
+						<v-list-item-title>{{ option.name }}</v-list-item-title>
 					</v-list-item>
 				</v-list>
 			</v-menu>
@@ -31,8 +31,16 @@ export default {
 	name: 'NavBar',
 	data() {
 		return {
-			navOptions: ['Search', 'My Collection'],
+			navOptions: [
+				{ name: 'Search', path: '/search' },
+				{ name: 'My Collection', path: '/' },
+			],
 		};
+	},
+	methods: {
+		handleClick(path) {
+			this.$router.push(path);
+		},
 	},
 };
 </script>

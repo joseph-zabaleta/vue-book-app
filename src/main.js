@@ -11,8 +11,13 @@ const router = new VueRouter({
 	mode: 'history',
 	routes: [
 		{
+			name: 'search',
 			path: '/search',
 			component: Search,
+		},
+		{
+			name: 'home',
+			path: '/',
 		},
 	],
 });
