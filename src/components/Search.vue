@@ -60,6 +60,7 @@ export default {
 			inputRules: [(value) => !!value || 'Title or Author is required'],
 		};
 	},
+
 	methods: {
 		validate() {
 			this.$refs.form.validate();
@@ -69,7 +70,8 @@ export default {
 				type: this.selectedRadio,
 			};
 
-			console.log(query);
+			console.log('query: ', query);
+			console.log('my test: ', this.$store.state.books.dummyData);
 		},
 		updateRadio(value) {
 			this.selectedRadio = value;
