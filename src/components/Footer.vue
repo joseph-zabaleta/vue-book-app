@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-footer padless dark absolute>
+		<v-footer padless dark fixed>
 			<v-col class="space" cols="12">
 				<v-icon color="#4a4a4a" dark>mdi-circle</v-icon>
 				<v-icon color="#4a4a4a" dark>mdi-circle</v-icon>

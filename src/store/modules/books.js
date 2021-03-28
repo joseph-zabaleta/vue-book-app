@@ -3,69 +3,6 @@ const state = {
 	dummyData: [
 		{
 			kind: 'books#volume',
-			id: 'HU5PzQEACAAJ',
-			etag: 'hiBC+a2A3kw',
-			selfLink:
-				'https://www.googleapis.com/books/v1/volumes/HU5PzQEACAAJ',
-			volumeInfo: {
-				title: 'Harry Potter and the goblet of fire (Arabic).',
-				authors: ['J. K. Rowling'],
-				publishedDate: '19??',
-				industryIdentifiers: [
-					{
-						type: 'OTHER',
-						identifier: 'OCLC:806100362',
-					},
-				],
-				readingModes: {
-					text: false,
-					image: false,
-				},
-				pageCount: 223,
-				printType: 'BOOK',
-				maturityRating: 'NOT_MATURE',
-				allowAnonLogging: false,
-				contentVersion: 'preview-1.0.0',
-				panelizationSummary: {
-					containsEpubBubbles: false,
-					containsImageBubbles: false,
-				},
-				language: 'en',
-				previewLink:
-					'http://books.google.com/books?id=HU5PzQEACAAJ&dq=inauthor:Rowling&hl=&cd=1&source=gbs_api',
-				infoLink:
-					'http://books.google.com/books?id=HU5PzQEACAAJ&dq=inauthor:Rowling&hl=&source=gbs_api',
-				canonicalVolumeLink:
-					'https://books.google.com/books/about/Harry_Potter_and_the_goblet_of_fire_Arab.html?hl=&id=HU5PzQEACAAJ',
-			},
-			saleInfo: {
-				country: 'US',
-				saleability: 'NOT_FOR_SALE',
-				isEbook: false,
-			},
-			accessInfo: {
-				country: 'US',
-				viewability: 'NO_PAGES',
-				embeddable: false,
-				publicDomain: false,
-				textToSpeechPermission: 'ALLOWED',
-				epub: {
-					isAvailable: false,
-				},
-				pdf: {
-					isAvailable: false,
-				},
-				webReaderLink:
-					'http://play.google.com/books/reader?id=HU5PzQEACAAJ&hl=&printsec=frontcover&source=gbs_api',
-				accessViewStatus: 'NONE',
-				quoteSharingAllowed: false,
-			},
-			searchInfo: {
-				textSnippet: 'Harry Potter series #4.',
-			},
-		},
-		{
-			kind: 'books#volume',
 			id: 'a7iuAL4XQ2UC',
 			etag: 'LXG4SHOkV3I',
 			selfLink:
