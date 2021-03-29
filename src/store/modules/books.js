@@ -1,5 +1,15 @@
 const state = {
-	selectedBook: null,
+	selectedBook: {
+		id: 'dUeZAAAAQBAJ',
+		title: 'The Five People You Meet in Heaven',
+		authors: 'Mitch Albom',
+		desc:
+			'Eddie is a wounded war veteran, an old man who has lived, in his mind, an uninspired life. His job is fixing rides at a seaside amusement park. On his 83rd birthday, a tragic accident kills him, as he tries to save a little girl from a falling cart. He awakes in the afterlife, where he learns that heaven is not a destination. It\'s a place where your life is explained to you by five people, some of whom you knew, others who may have been strangers. One by one, from childhood to soldier to old age, Eddie\'s five people revisit their connections to him on earth, illuminating the mysteries of his "meaningless" life, and revealing the haunting secret behind the eternal question: "Why was I here?"',
+		isbn: '9781401388881',
+		imgUrl:
+			'http://books.google.com/books/content?id=dUeZAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+		bookshelf: 'No Bookshelf Set',
+	},
 	dummyData: [
 		{
 			kind: 'books#volume',
@@ -348,6 +358,9 @@ const state = {
 const getters = {
 	getCurrentBooks(state) {
 		return state.dummyData;
+	},
+	getSelectedBook(state) {
+		return state.selectedBook;
 	},
 };
 const actions = {
