@@ -20,8 +20,12 @@ export default {
 </script>
 
 <style>
+body {
+	background-color: #9b9b9b;
+}
 #app {
 	background-color: #9b9b9b;
 	color: white;
+	margin-bottom: 50px;
 }
 </style>

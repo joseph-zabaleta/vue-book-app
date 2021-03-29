@@ -1,31 +1,50 @@
 <template>
 	<div>
-		<v-card
-			v-for="item in items"
-			:key="item.id"
-			color="#d8d8d8"
-			elevation="5"
-			outlined
-			width="300"
-			class="card"
-		>
-			<v-img
-				class="ma-3 img"
-				width="200"
-				height="250"
-				:src="item.imgUrl"
-			></v-img>
+		<Banner message="Search Results"></Banner>
+		<div class="card-container">
+			<v-card
+				v-for="item in items"
+				:key="item.id"
+				color="#d8d8d8"
+				elevation="5"
+				outlined
+				width="300"
+				class="card"
+			>
+				<v-img
+					class="ma-5 img"
+					width="200"
+					height="250"
+					:src="item.imgUrl"
+				></v-img>
 
-			{{ item.title }}
-			<v-spacer></v-spacer>
-			{{ item.author }}
-		</v-card>
+				<h3 class="font-weight-medium title">
+					{{ item.title }}
+				</h3>
+				<v-spacer></v-spacer>
+				<h5 class="font-italic font-weight-regular author">
+					{{ item.author }}
+				</h5>
+				<v-btn
+					class="mr-4 white--text font-weight-regular button"
+					color="black"
+					dark
+					width="80%"
+					>Select This Book</v-btn
+				>
+			</v-card>
+		</div>
 	</div>
 </template>
 
 <script>
+import Banner from './Banner.vue';
+
 export default {
 	name: 'Results',
+	components: {
+		Banner,
+	},
 	data() {
 		return {
 			items: [],
@@ -54,7 +73,7 @@ export default {
 </script>
 
 <style scoped>
-div {
+.card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -71,5 +90,16 @@ div {
 	border: 5px solid white;
 	box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
 		0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%) !important;
+}
+
+.title {
+	color: white;
+	text-align: center;
+	max-width: 200px;
+	text-shadow: 2px 1px 3px #000;
+}
+
+.button {
+	margin: 20px;
 }
 </style>
