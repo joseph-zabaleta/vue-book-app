@@ -1,5 +1,5 @@
 const state = {
-	testName: 'My little test',
+	selectedBook: null,
 	dummyData: [
 		{
 			kind: 'books#volume',
@@ -346,12 +346,20 @@ const state = {
 	],
 };
 const getters = {
-	getTest(state) {
-		return state.testName;
+	getCurrentBooks(state) {
+		return state.dummyData;
 	},
 };
-const actions = {};
-const mutations = {};
+const actions = {
+	currentBook({ commit }, book) {
+		commit('setSelectedBook', book);
+	},
+};
+const mutations = {
+	setSelectedBook(state, book) {
+		state.selectedBook = book;
+	},
+};
 
 export default {
 	state,

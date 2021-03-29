@@ -33,6 +33,7 @@
 					color="black"
 					dark
 					width="80%"
+					@click="handleSelectBook(item)"
 					>Select This Book</v-btn
 				>
 			</v-card>
@@ -41,6 +42,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 import Banner from './Banner.vue';
 
 export default {
@@ -53,8 +55,11 @@ export default {
 			items: [],
 		};
 	},
+	computed: {
+		...mapGetters(['getCurrentBooks']),
+	},
 	created() {
-		this.items = this.$store.state.books.dummyData.map((obj) => {
+		this.items = this.getCurrentBooks.map((obj) => {
 			const book = {};
 
 			book.id = obj.id;
@@ -71,6 +76,16 @@ export default {
 
 			return book;
 		});
+	},
+	methods: {
+		...mapActions(['currentBook']),
+		handleSelectBook() {
+			// console.log('before', this.$store.state.books.selectedBook);
+			// console.log('selected book:', book);
+			// this.currentBook(book);
+			// console.log('after', this.$store.state.books.selectedBook);
+			console.log(this.getCurrentBooks);
+		},
 	},
 };
 </script>
