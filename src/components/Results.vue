@@ -21,10 +21,13 @@
 				<h3 class="font-weight-medium title">
 					{{ item.title }}
 				</h3>
-				<v-spacer></v-spacer>
+
 				<h5 class="font-italic font-weight-regular author">
 					{{ item.author }}
 				</h5>
+				<v-card-text class="desc">
+					{{ item.desc.substr(0, 65) }}...
+				</v-card-text>
 				<v-btn
 					class="mr-4 white--text font-weight-regular button"
 					color="black"
@@ -97,6 +100,11 @@ export default {
 	text-align: center;
 	max-width: 200px;
 	text-shadow: 2px 1px 3px #000;
+}
+
+.desc {
+	width: 90%;
+	text-indent: 10px;
 }
 
 .button {
