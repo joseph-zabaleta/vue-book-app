@@ -3,13 +3,14 @@
 		<v-card
 			v-for="item in items"
 			:key="item.id"
+			color="#d8d8d8"
 			elevation="5"
 			outlined
 			width="300"
 			class="card"
 		>
 			<v-img
-				class="ma-3"
+				class="ma-3 img"
 				width="200"
 				height="250"
 				:src="item.imgUrl"
@@ -64,5 +65,11 @@ div {
 	flex-direction: column;
 	align-items: center;
 	margin: 25px 25px;
+}
+
+.img {
+	border: 5px solid white;
+	box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+		0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%) !important;
 }
 </style>
