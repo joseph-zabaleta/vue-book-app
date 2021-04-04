@@ -10,7 +10,7 @@
 				class="card"
 			>
 				<div class="card-button">
-					<v-btn x-large icon>
+					<v-btn @click="backToResults" x-large icon>
 						<v-icon>mdi-close-circle</v-icon>
 					</v-btn>
 				</div>
@@ -59,6 +59,11 @@ export default {
 	created() {
 		this.book = this.getSelectedBook;
 	},
+	methods: {
+		backToResults() {
+			this.$router.go(-1);
+		},
+	},
 };
 </script>
 
@@ -102,7 +107,7 @@ export default {
 	border-radius: 10px;
 	width: 90%;
 	height: 100px;
-	overflow: scroll;
+	overflow: auto;
 	text-indent: 10px;
 }
 
