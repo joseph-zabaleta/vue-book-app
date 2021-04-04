@@ -79,12 +79,9 @@ export default {
 	},
 	methods: {
 		...mapActions(['currentBook']),
-		handleSelectBook() {
-			// console.log('before', this.$store.state.books.selectedBook);
-			// console.log('selected book:', book);
-			// this.currentBook(book);
-			// console.log('after', this.$store.state.books.selectedBook);
-			console.log(this.getCurrentBooks);
+		handleSelectBook(book) {
+			this.currentBook(book);
+			this.$router.push('/details');
 		},
 	},
 };
