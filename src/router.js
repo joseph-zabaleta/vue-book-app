@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Search from './components/Search.vue';
 import Results from './components/Results.vue';
 import Details from './components/Details.vue';
+import Collection from './components/Collection.vue';
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,7 @@ const router = new VueRouter({
 		{
 			name: 'home',
 			path: '/',
+			component: Collection,
 		},
 		{
 			name: 'search',

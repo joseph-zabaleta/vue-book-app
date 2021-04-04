@@ -354,6 +354,7 @@ const state = {
 			},
 		},
 	],
+	currentCollection: [],
 };
 const getters = {
 	getCurrentBooks(state) {
@@ -361,6 +362,9 @@ const getters = {
 	},
 	getSelectedBook(state) {
 		return state.selectedBook;
+	},
+	getCollection(state) {
+		return state.currentCollection;
 	},
 };
 const actions = {
